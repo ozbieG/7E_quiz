@@ -15,15 +15,17 @@ def round_based_on_digits(value, is_percentage=False):
 
     if num_digits % 2 == 0:
         rounded_value = round(value / base) * base
-    else:
+    elif num_digits % 2 != 0 and base != 1:
         rounded_value = round(value / (base // 2)) * (base // 2)
+    else:
+        rounded_value = round(value,1)
 
     return rounded_value if not is_percentage else rounded_value
 
 def generate_options(actual_value):
     is_percentage = 0 <= actual_value <= 1
     
-    if not is_percentage:
+    if not is_percentage and actual_value >=20:
         rounded_value = round_based_on_digits(actual_value)
         
         step = max(1, rounded_value // 10)
@@ -39,6 +41,21 @@ def generate_options(actual_value):
         ranges.append(f"{lower_bound} - {rounded_value + step * 2}")
         return ranges
     
+    elif not is_percentage and actual_value < 20:
+        rounded_value = round_based_on_digits(actual_value)
+        
+        step = 2
+        
+        lower_bound = rounded_value - step * 2
+        ranges = []
+        
+        for _ in range(3):
+            upper_bound = lower_bound + step - 1
+            ranges.append(f"{round(lower_bound)} - {round(upper_bound)}")
+            lower_bound = upper_bound + 1
+
+        ranges.append(f"{round(lower_bound)} - {round(rounded_value) + step * 2}")
+        return ranges
     else:
         lower_bound = random.uniform(actual_value * 0.25, actual_value)
         step = (actual_value - lower_bound) / 4
@@ -58,10 +75,11 @@ def is_correct(selected_choice, actual_value):
         lower /= 100
         upper /= 100
         upper += 0.02
+        return lower <= actual_value <= upper 
+
     else:
         lower, upper = map(float, selected_choice.split('-')) 
-
-    return lower <= actual_value <= upper 
+        return round(lower) <= round(actual_value) <= round(upper) 
 
 def next_question():
     st.session_state.current_question += 1
@@ -158,10 +176,12 @@ def main():
         st.write("*Answer questions about store parameters and score points.*")
         
         store_numbers = store_data['STORE_ID'].unique()
+
         selected_store = st.selectbox("Select a Store", store_numbers)
+        
         store_parameters = store_data[store_data['STORE_ID'] == selected_store].iloc[0]
 
-        st.button("Start Game", key="start-button", help="Click to begin the quiz", use_container_width=True, on_click=start_game(selected_store))
+        st.button("Start Game", key="start-button", help="Click to begin the quiz",on_click=lambda: start_game(selected_store), use_container_width=True)
 
         st.markdown("## Store Details")
         st.write("*Brand* : "+store_parameters['Brand'])
