@@ -74,7 +74,7 @@ def is_correct(selected_choice, actual_value):
         lower, upper = map(float, selected_choice.split('-'))
         lower /= 100
         upper /= 100
-        upper += 0.02
+        upper += 0.01
         return lower <= actual_value <= upper 
 
     else:
