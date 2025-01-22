@@ -259,6 +259,8 @@ def main():
                 margin-top: 100px;
                 margin-left: 30px;
                 margin-bottom: 40px;
+                color: white;
+
             }
             .text {
                 font-family: 'Roboto', sans-serif;
@@ -268,6 +270,8 @@ def main():
                 margin-top: 5px;
                 line-height: 1.2;
                 margin-bottom: 0px;
+                color: white;
+
             }
         </style>
         <div class="title">DOES YOUR CUSTOMER HAVE YOUR HEART?</div>
