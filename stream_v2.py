@@ -282,13 +282,12 @@ def main():
         st.markdown("""
             <style>
                 .stSelectbox div[data-baseweb="select"] {
-                    font-size: 30px; /* Increase font size inside the dropdown */
+                    font-size: 20px; /* Increase font size inside the dropdown */
                     max-width: 400px; /* Increase width of the select box */
                     margin: 0 auto; /* Center align */
                     padding: 10px; /* Add some padding for better spacing */
                     width: 100%; /* Ensure the select box spans the width properly */
                 }
-
             </style>
         """, unsafe_allow_html=True)
 
