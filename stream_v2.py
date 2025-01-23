@@ -352,7 +352,7 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="headerwbig">YOU HAVE <br> {selected_store_data['rewards']:,} <br> REWARDS MEMBERS.</div>
+            <div class="headerwbig">YOU HAVE <br> {selected_store_data['REWARD_MEMBERS']:,} <br> REWARDS MEMBERS.</div>
             <div class="header2">HOW WELL DO <br> YOU KNOW THEM? <br> LET'S FIND OUT!</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
@@ -368,7 +368,7 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="headerw">Out of your <br> {selected_store_data['rewards']:,} <br> Rewards Members...</div>
+            <div class="headerw">Out of your <br> {selected_store_data['REWARD_MEMBERS']:,} <br> Rewards Members...</div>
             <div class="header2">HOW MANY <br> COLLECT BONUS <br> POINTS?</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
@@ -384,8 +384,8 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="headerw">Out of your <br> {selected_store_data['rewards']:,} <br> Rewards Members...</div>
-            <div class="header2">{selected_store_data['bonus_count']:,} COLLECT BONUS POINTS</div>
+            <div class="headerw">Out of your <br> {selected_store_data['REWARD_MEMBERS']:,} <br> Rewards Members...</div>
+            <div class="header2">{round(selected_store_data['BONUS_POINTS_EARNED_MEMBERS']):,} COLLECT BONUS POINTS</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
@@ -417,7 +417,7 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="headerb">Out of your <br> {selected_store_data['rewards']:,} <br> Rewards Members...</div>
+            <div class="headerb">Out of your <br> {selected_store_data['REWARD_MEMBERS']:,} <br> Rewards Members...</div>
             <div class="headerbpink">WHAT PERCENTAGE HAVE AN EMAIL OR PHONE NUMBER LINKED TO THEIR PROFILE?</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
@@ -434,8 +434,8 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="headerb">Out of your <br> {selected_store_data['rewards']:,} <br> Rewards Members...</div>
-            <div class="headerbpink">{round(selected_store_data['cont_perc']*100)}% <br> HAVE LINKED AN <br> EMAIL OR PHONE NUMBER.</div>
+            <div class="headerb">Out of your <br> {selected_store_data['REWARD_MEMBERS']:,} <br> Rewards Members...</div>
+            <div class="headerbpink">{round(selected_store_data['PERC_MEMBERS_WHO_ARE_CONTACTABLE']*100)}% <br> HAVE LINKED AN <br> EMAIL OR PHONE NUMBER.</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
         st.markdown('<span id="button-prev"></span>', unsafe_allow_html=True)
@@ -468,8 +468,8 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="headerw">Out of your <br> {selected_store_data['rewards']:,} <br> Rewards Members...</div>
-            <div class="header2">WHAT PERCENTAGE BUY {str.upper(selected_store_data['category'])} IN AN AVERAGE MONTH</div>
+            <div class="headerw">Out of your <br> {selected_store_data['REWARD_MEMBERS']:,} <br> Rewards Members...</div>
+            <div class="header2">WHAT PERCENTAGE BUY {str.upper(selected_store_data['CATEGORY_FOR_MEMBER_ACTIVITY_KPIS'])} IN AN AVERAGE MONTH</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
@@ -486,8 +486,8 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="headerw">Out of your <br> {selected_store_data['rewards']:,} <br> Rewards Members...</div>
-            <div class="header2">{round(selected_store_data['perc_members']*100)}% <br> BUY {str.upper(selected_store_data['category'])} IN AN <br>AVERAGE MONTH.</div>
+            <div class="headerw">Out of your <br> {selected_store_data['REWARD_MEMBERS']:,} <br> Rewards Members...</div>
+            <div class="header2">{round(selected_store_data['PERC_CATEGORY_ACTIVE_CUSTOMERS']*100)}% <br> BUY {str.upper(selected_store_data['CATEGORY_FOR_MEMBER_ACTIVITY_KPIS'])} IN AN <br>AVERAGE MONTH.</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
@@ -521,7 +521,7 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="headerb">Out of your <br> {selected_store_data['rewards']:,} <br> Rewards Members...</div>
+            <div class="headerb">Out of your <br> {selected_store_data['REWARD_MEMBERS']:,} <br> Rewards Members...</div>
             <div class="headerbpink">HOW MANY <br> REDEEM THOSE POINTS?</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
@@ -540,8 +540,8 @@ def main():
         st.button("", key="home-button", on_click=go_to_home)
 
         quiz_html = f"""
-            <div class="headerb">Out of your <br> {selected_store_data['rewards']:,} <br> Rewards Members...</div>
-            <div class="headerbpink">{selected_store_data['redeem_count']:,} <br> REDEEM POINTS.</div>
+            <div class="headerb">Out of your <br> {selected_store_data['REWARD_MEMBERS']:,} <br> Rewards Members...</div>
+            <div class="headerbpink">{round(selected_store_data['POINTS_REDEEMED_MEMBERS']):,} <br> REDEEM POINTS.</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
@@ -574,12 +574,12 @@ def main():
 
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
+        category = str.upper(selected_store_data['CATEGORY_FOR_OVERALL_KPIS'])
         quiz_html = f"""
-            <div class="headerw">Out of your <br> {selected_store_data['rewards']:,} <br> Rewards Members...</div>
-            <div class="header2">WHAT PERCENTAGE <br> USUALLY BUY JUST <br> 1 UNIT, LIKE <br> {str.upper(selected_store_data['sing_cat'])}? </div>
+            <div class="headerw">OUT OF ALL THE<br>{category} <br> TRANSACTIONS...</div>
+            <div class="header2">WHAT PERCENTAGE CONSISTED <br> ONLY A SINGLE UNIT <br> FROM <br>{category}, <br>WITH NO OTHER PRODUCT INCLUDED? </div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
-
         st.markdown('<span id="button-prev"></span>', unsafe_allow_html=True)
         st.button("",key="prev", on_click=go_to_page, args=(14,))
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
@@ -592,9 +592,11 @@ def main():
 
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
+        data = round(selected_store_data['PERC_SINGLE_UNIT_TXNS_BASED_ON_ALL_SLINS']*100)
+        category = str.upper(selected_store_data['CATEGORY_FOR_OVERALL_KPIS'])
         quiz_html = f"""
-            <div class="headerw">Out of your <br> {selected_store_data['rewards']:,} <br> Rewards Members...</div>
-            <div class="header2">{round(selected_store_data['sing_perc']*100)}% <br>BUY 1 THING.</div>
+            <div class="headerw">OUT OF ALL THE<br>{category} <br> TRANSACTIONS...</div>
+            <div class="header2">{data}% <br>OF TRANSACTIONS<br>HAD ONLY <br>ONE UNIT OF<br>{category}  </div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
@@ -611,7 +613,7 @@ def main():
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
             <div class="header_payoff_pink">MAKE A<br> CUTE COUPLE! <br> PLUS-SELL ITEMS <br> THAT PAIR WELL.</div>
-            <div class="header_payoff_white">If 1 out of every 10 customers buys 1 more unit,that's a 4% lift in sales.</div>
+            <div class="header_payoff_white">If 1 out of every 10 customers buys 1 more unit,that's a 4% lift in sales.</div><
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
         st.markdown('<span id="button-prev"></span>', unsafe_allow_html=True)
