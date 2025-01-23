@@ -610,7 +610,7 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="header_payoff_pink">MAKE A CUTE <br>COUPLE! PLUS-SELL <br> ITEMS THAT PAIR <br>WELL AND INCREASE <br>YOUR SALES X%.</div>
+            <div class="header_payoff_pink">MAKE A<br> CUTE COUPLE! <br> PLUS-SELL ITEMS <br> THAT PAIR WELL.</div>
             <div class="header_payoff_white">If 1 out of every 10 customers buys 1 more unit,that's a 4% lift in sales.</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
