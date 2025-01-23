@@ -55,18 +55,22 @@ def encode_image(image_path):
 
 
 def main():
-    st.set_page_config(page_title="Static Questions", layout="wide")
+    st.set_page_config(
+    page_title="Questions", 
+    layout="wide")
     st.markdown("""
             <style>
             .element-container:has(#button-home) + div button {
-                padding: 60px 50px; /* Adjust padding for a bigger button */
+                padding: 60px 300px; /* Adjust padding for a bigger button */
                 border-radius: 5%; /* Make it circular */
                 background-color: transparent; /* No background color */
                 font-weight: bold; /* Button text weight */
                 position: fixed; /* Fix the position to the viewport */
-                top: 10px; /* Position at the top */
-                right: 10px; /* Position at the right */
+                top: 80px; /* Position at the top */
+                left: 85px; /* Position at the right */
                 z-index: 9999; /* Ensure the button stays on top of other elements */
+                border: none; /* Eliminate the border */
+
             }
             .element-container:has(#button-next) + div button {
                 padding: 80px 50px; /* Adjust padding for a bigger button */
@@ -77,6 +81,7 @@ def main():
                 bottom: 80px; /* Position at the top */
                 right: 50px; /* Position at the right */
                 z-index: 9999; /* Ensure the button stays on top of other elements */
+                border: none; /* Eliminate the border */
             }
             .element-container:has(#button-prev) + div button {
                 padding: 80px 50px; /* Adjust padding for a bigger button */
@@ -85,8 +90,10 @@ def main():
                 font-weight: bold; /* Button text weight */
                 position: fixed; /* Fix the position to the viewport */
                 bottom: 80px; /* Position at the top */
-                left: 181px; /* Position at the right */
+                left: 225px; /* Position at the right */
                 z-index: 9999; /* Ensure the button stays on top of other elements */
+                border: none; /* Eliminate the border */
+
             }
             </style>
         """, unsafe_allow_html=True)
@@ -108,7 +115,7 @@ def main():
                     font-weight: bold;
                     text-align: center;
                     margin-top: 350px;
-                    margin-left: 30px;
+                    margin-left: 100px;
                     line-height: 1.2;
                     color: white;
                 }
@@ -227,9 +234,11 @@ def main():
         st.session_state.selected_store = None
     
     st.html("<style> .main {overflow: hidden} </style>")
-    # Home Page
+    # Home Page 1
     if st.session_state.page == "home":
-        add_background("backgrounds/black_start_screen.png")
+        add_background("backgrounds/home_page.png")
+        st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
+        st.button("", key="home-button", on_click=go_to_home)
 
         quiz_html = """
         <style>
@@ -271,7 +280,6 @@ def main():
                 line-height: 1.2;
                 margin-bottom: 0px;
                 color: white;
-
             }
         </style>
         <div class="title">DOES YOUR CUSTOMER HAVE YOUR HEART?</div>
@@ -286,7 +294,7 @@ def main():
         st.markdown("""
             <style>
                 .stSelectbox div[data-baseweb="select"] {
-                    font-size: 20px; /* Increase font size inside the dropdown */
+                    font-size: 25px; /* Increase font size inside the dropdown */
                     max-width: 400px; /* Increase width of the select box */
                     margin: 0 auto; /* Center align */
                     padding: 10px; /* Add some padding for better spacing */
@@ -296,29 +304,14 @@ def main():
         """, unsafe_allow_html=True)
 
         selected_store = st.selectbox("", store_data['STORE_ID'].unique())
-        st.markdown("""
-            <style>
-            .element-container:has(#button-start) + div button {
-                padding: 80px 50px; /* Adjust padding for a bigger button */
-                border-radius: 5%; /* Make it circular */
-                background-color: transparent; /* No background color */
-                font-weight: bold; /* Button text weight */
-                position: fixed; /* Fix the position to the viewport */
-                bottom: 80px; /* Position at the top */
-                right: 50px; /* Position at the right */
-                z-index: 9999; /* Ensure the button stays on top of other elements */
-            }
-            </style>
-        """, unsafe_allow_html=True)
-
-        st.markdown('<span id="button-start"></span>', unsafe_allow_html=True)
+        st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("", on_click=start_quiz, args=(selected_store,))
 
 
-    #Page 1
+    #Page 2
     elif st.session_state.page == 1:
         selected_store_data = store_data[store_data['STORE_ID'] == st.session_state.selected_store].iloc[0]
-        add_background("backgrounds/black_background.png")
+        add_background("backgrounds/teaser_page.png")
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = """
@@ -346,13 +339,15 @@ def main():
             <div class="headery">HOW MANY <br> REWARD MEMBERS <br> DO YOU HAVE?</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
+        st.markdown('<span id="button-prev"></span>', unsafe_allow_html=True)
+        st.button("",key="prev", on_click=go_to_home)
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("", key="next-button", on_click=go_to_page, args=(2,))
     
-    #Page 2
+    #Page 3
     elif st.session_state.page == 2:
         selected_store_data = store_data[store_data['STORE_ID'] == st.session_state.selected_store].iloc[0]
-        add_background("backgrounds/black_background_page_2.png")
+        add_background("backgrounds/page_3_4_5_10_11_16_17.png")
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
@@ -365,10 +360,10 @@ def main():
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("",key="next", on_click=go_to_page, args=(3,))
     
-    # Page 3
+    # Page 4
     elif st.session_state.page == 3:
         selected_store_data = store_data[store_data['STORE_ID'] == st.session_state.selected_store].iloc[0]
-        add_background("backgrounds/black_background.png")
+        add_background("backgrounds/page_3_4_5_10_11_16_17.png")
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
@@ -381,10 +376,10 @@ def main():
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("",key="next", on_click=go_to_page, args=(4,))
 
-    # Page 4
+    # Page 5
     elif st.session_state.page == 4:
         selected_store_data = store_data[store_data['STORE_ID'] == st.session_state.selected_store].iloc[0]
-        add_background("backgrounds/black_background.png")
+        add_background("backgrounds/page_3_4_5_10_11_16_17.png")
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
@@ -398,9 +393,9 @@ def main():
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("",key="next", on_click=go_to_page, args=(5,))
     
-    #Page 5
+    #Page 6
     elif st.session_state.page == 5:
-        add_background("backgrounds/black_background.png")
+        add_background("backgrounds/page_6.png")
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
@@ -413,10 +408,10 @@ def main():
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("",key="next", on_click=go_to_page, args=(6,))
 
-    # Page 6
+    # Page 7
     elif st.session_state.page == 6:
         selected_store_data = store_data[store_data['STORE_ID'] == st.session_state.selected_store].iloc[0]
-        add_background("backgrounds/white_background.png")
+        add_background("backgrounds/page_7_8_13_14.png")
 
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
@@ -431,10 +426,10 @@ def main():
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("",key="next", on_click=go_to_page, args=(7,))
 
-    # Page 7
+    # Page 8
     elif st.session_state.page == 7:
         selected_store_data = store_data[store_data['STORE_ID'] == st.session_state.selected_store].iloc[0]
-        add_background("backgrounds/white_background.png")
+        add_background("backgrounds/page_7_8_13_14.png")
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
@@ -447,9 +442,9 @@ def main():
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("",key="next", on_click=go_to_page, args=(8,))
     
-    # Page 8
+    # Page 9
     elif st.session_state.page == 8:
-        add_background("backgrounds/white_background.png")
+        add_background("backgrounds/page_9.png")
 
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
@@ -464,10 +459,10 @@ def main():
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("",key="next", on_click=go_to_page, args=(9,))
 
-    # Page 9
+    # Page 10
     elif st.session_state.page == 9:
         selected_store_data = store_data[store_data['STORE_ID'] == st.session_state.selected_store].iloc[0]
-        add_background("backgrounds/black_background.png")
+        add_background("backgrounds/page_3_4_5_10_11_16_17.png")
 
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
@@ -482,10 +477,10 @@ def main():
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("",key="next", on_click=go_to_page, args=(10,))
 
-    # Page 10
+    # Page 11
     elif st.session_state.page == 10:
         selected_store_data = store_data[store_data['STORE_ID'] == st.session_state.selected_store].iloc[0]
-        add_background("backgrounds/black_background.png")
+        add_background("backgrounds/page_3_4_5_10_11_16_17.png")
 
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
@@ -500,9 +495,9 @@ def main():
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("",key="next", on_click=go_to_page, args=(11,))
 
-    # Page 11
+    # Page 12
     elif st.session_state.page == 11:
-        add_background("backgrounds/black_background.png")
+        add_background("backgrounds/page_12.png")
 
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
@@ -517,10 +512,10 @@ def main():
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("",key="next", on_click=go_to_page, args=(12,))
 
-    # Page 12
+    # Page 13
     elif st.session_state.page == 12:
         selected_store_data = store_data[store_data['STORE_ID'] == st.session_state.selected_store].iloc[0]
-        add_background("backgrounds/white_background.png")
+        add_background("backgrounds/page_7_8_13_14.png")
 
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
@@ -535,10 +530,10 @@ def main():
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("",key="next", on_click=go_to_page, args=(13,))
 
-    # Page 13
+    # Page 14
     elif st.session_state.page == 13:
         selected_store_data = store_data[store_data['STORE_ID'] == st.session_state.selected_store].iloc[0]
-        add_background("backgrounds/white_background.png")
+        add_background("backgrounds/page_7_8_13_14.png")
 
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
@@ -554,9 +549,9 @@ def main():
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("",key="next", on_click=go_to_page, args=(14,))
 
-    # Page 14
+    # Page 15
     elif st.session_state.page == 14:
-        add_background("backgrounds/white_background.png")
+        add_background("backgrounds/page_15.png")
 
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
@@ -571,10 +566,10 @@ def main():
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("",key="next", on_click=go_to_page, args=(15,))
     
-    # Page 15
+    # Page 16
     elif st.session_state.page == 15:
         selected_store_data = store_data[store_data['STORE_ID'] == st.session_state.selected_store].iloc[0]
-        add_background("backgrounds/black_background.png")
+        add_background("backgrounds/page_3_4_5_10_11_16_17.png")
 
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
@@ -589,10 +584,10 @@ def main():
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("",key="next", on_click=go_to_page, args=(16,))
 
-    # Page 16
+    # Page 17
     elif st.session_state.page == 16:
         selected_store_data = store_data[store_data['STORE_ID'] == st.session_state.selected_store].iloc[0]
-        add_background("backgrounds/black_background.png")
+        add_background("backgrounds/page_3_4_5_10_11_16_17.png")
 
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
@@ -607,9 +602,9 @@ def main():
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("",key="next", on_click=go_to_page, args=(17,))
 
-    # Page 17
+    # Page 18
     elif st.session_state.page == 17:
-        add_background("backgrounds/black_background.png")
+        add_background("backgrounds/page_18.png")
 
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
@@ -623,9 +618,9 @@ def main():
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("",key="next", on_click=go_to_page, args=(18,))
     
-    #Final Page
+    #Final Page 19
     elif st.session_state.page == 18:
-        add_background("backgrounds/black_background_last_page.png")
+        add_background("backgrounds/end_page.png")
         quiz_html = f"""
             <div class="header_payoff_pink">THE SECRET TO <br>BUILDING A GREAT <br>REWARDS CUSTOMER <br>RELATIONSHIP<br> IS SIMPLE:</div>
             <div class="header_payoff_dark_pink_small">1.  Be supportive</div>
@@ -642,6 +637,8 @@ def main():
         st.button("", key="home-button", on_click=go_to_home)
         st.markdown('<span id="button-prev"></span>', unsafe_allow_html=True)
         st.button("",key="prev", on_click=go_to_page, args=(17,))
+        st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
+        st.button("",key="next", on_click=go_to_home)
 
 if __name__ == "__main__":
     main()
