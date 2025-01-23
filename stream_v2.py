@@ -294,7 +294,8 @@ def main():
         st.markdown("""
             <style>
                 .stSelectbox div[data-baseweb="select"] {
-                    font-size: 25px; /* Increase font size inside the dropdown */
+                    font-size: 20px; /* Increase font size inside the dropdown */
+                    font-weight:900; 
                     max-width: 400px; /* Increase width of the select box */
                     margin: 0 auto; /* Center align */
                     padding: 10px; /* Add some padding for better spacing */
