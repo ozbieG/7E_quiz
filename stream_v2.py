@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import base64
 
-FILE_PATH = r"game_input.xlsx"
+FILE_PATH = r"game_inputs.xlsx"
 
 @st.cache_data
 def load_data(file_path):
@@ -423,7 +423,7 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="header_payoff_pink">MEMBERS WHO COLLECT BONUS POINTS SPEND 217% MORE THAN THOSE WHO DON'T</div>
+            <div class="header_payoff_pink">MEMBERS WHO COLLECT BONUS POINTS SPEND 217% MORE</div>
             <div class="header_payoff_white">Show the love by <br> hanging green tags <br> so they know about <br> bonus offers.</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
@@ -483,7 +483,7 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="header_payoff_dark_pink">CONTACTABLE REWARDS MEMEBERS SPEND 31% MORE</div>
+            <div class="header_payoff_dark_pink">CONTACTABLE REWARDS MEMBERS SPEND 31% MORE</div>
                         <div style="margin: 550px;"></div>
             <div class="header_payoff_black">Make sure MEMBERS <br> play MAKE MY DAY <br> WITH $5K in the <br> REWARDS app.</div>
         """
