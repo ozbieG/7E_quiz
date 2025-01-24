@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import base64
 
-FILE_PATH = r"game_inputs.xlsx"
+FILE_PATH = r"game_input.xlsx"
 
 @st.cache_data
 def load_data(file_path):
