@@ -105,7 +105,7 @@ def main():
                     font-weight: bold;
                     text-align: center;
                     margin-top: 350px;
-                    margin-left: 30px;
+                    margin-left: 110px;
                     line-height: 1.2;
                     color: #ff99d6;
                 }
@@ -114,8 +114,8 @@ def main():
                     font-size: 55pt;
                     font-weight: bold;
                     text-align: center;
-                    margin-top: 350px;
-                    margin-left: 100px;
+                    margin-top: 280px;
+                    margin-left: 110px;
                     line-height: 1.2;
                     color: white;
                 }
@@ -125,17 +125,17 @@ def main():
                     font-weight: bold;
                     text-align: center;
                     margin-top: 350px;
-                    margin-left: 30px;
+                    margin-left: 110px;
                     line-height: 1.2;
                     color: white;
                 }
                 .headerb {
                     font-family: 'Roboto', sans-serif;
-                    font-size: 45pt;
+                    font-size: 55pt;
                     font-weight: bold;
                     text-align: center;
-                    margin-top: 350px;
-                    margin-left: 30px;
+                    margin-top: 280px;
+                    margin-left: 110px;
                     line-height: 1.2;
                     color: black;
                 }
@@ -144,8 +144,8 @@ def main():
                     font-size: 55pt;
                     font-weight: bold;
                     text-align: center;
-                    margin-top: 95px;
-                    margin-left: 30px;
+                    margin-top: 150px;
+                    margin-left: 110px;
                     line-height: 1.2;
                     color: #ff0098;
                 }
@@ -154,8 +154,8 @@ def main():
                     font-size: 55pt;
                     font-weight: bold;
                     text-align: center;
-                    margin-top: 95px;
-                    margin-left: 30px;
+                    margin-top: 150px;
+                    margin-left: 110px;
                     line-height: 1.2;
                     color: #ff99d6;
                 }
@@ -169,13 +169,23 @@ def main():
                     line-height: 1.2;
                     color: white;
                 }
+                .header_payoff_white2 {
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 45pt;
+                    font-weight: bold;
+                    text-align: left;
+                    margin-top: 200px;
+                    margin-left: 90px;
+                    line-height: 1.2;
+                    color: white;
+                }
                 .header_payoff_pink {
                     font-family: 'Roboto', sans-serif;
                     font-size: 55pt;
                     font-weight: bold;
                     text-align: center;
-                    margin-top: 300px;
-                    margin-left: 45px;
+                    margin-top: 250px;
+                    margin-left: 110px;
                     line-height: 1.2;
                     color: #ff99d6;
                 }
@@ -184,7 +194,7 @@ def main():
                     font-size: 45pt;
                     font-weight: bold;
                     text-align: left;
-                    margin-top: 300px;
+                    margin-top: 250px;
                     margin-left: 90px;
                     line-height: 1.2;
                     color: black;
@@ -195,7 +205,7 @@ def main():
                     font-weight: bold;
                     text-align: center;
                     margin-top: 300px;
-                    margin-left: 30px;
+                    margin-left: 60px;
                     line-height: 1.2;
                     color: #ff0098;
                 }
@@ -248,7 +258,7 @@ def main():
                 font-weight: bold;
                 text-align: center;
                 margin-top: 380px;
-                margin-left: 30px;
+                    margin-left: 100px;
                 line-height: 1.2;
                 color: #ff0098;
             }
@@ -257,7 +267,7 @@ def main():
                 font-size: 40pt;
                 font-weight: bold;
                 text-align: center;
-                margin-left: 30px;
+                    margin-left: 110px;
                 color: #ff99d6;
             }
             .subheader {
@@ -266,7 +276,7 @@ def main():
                 font-weight: bold;
                 text-align: center;
                 margin-top: 100px;
-                margin-left: 30px;
+                    margin-left: 110px;
                 margin-bottom: 40px;
                 color: white;
 
@@ -282,13 +292,11 @@ def main():
                 color: white;
             }
         </style>
-        <div class="title">DOES YOUR CUSTOMER HAVE YOUR HEART?</div>
+        <div class="title">DOES YOUR CUSTOMER HAVE<br> YOUR HEART?</div>
         <div class="header_home">5 QUESTIONS WILL TELL ALL!</div>
         <div class="subheader">
             ENTER YOUR <br>STORE ID TO PLAY
         </div>
-        <div class="text">Don't have one?</div>
-        <div class="text">Let's match you with <br> a store to play</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
         st.markdown("""
@@ -297,8 +305,8 @@ def main():
                     font-size: 20px; /* Increase font size inside the dropdown */
                     font-weight:900;
                     max-width: 400px; /* Increase width of the select box */
-                    margin: 0 auto; /* Center align */
-                    padding: 10px; /* Add some padding for better spacing */
+                    margin-left: 305px; /* Center align */
+                    padding: 30px; /* Add some padding for better spacing */
                     width: 100%; /* Ensure the select box spans the width properly */
                 }
             </style>
@@ -323,7 +331,7 @@ def main():
                     font-weight: bold;
                     text-align: center;
                     margin-top: 350px;
-                    margin-left: 30px;
+                    margin-left: 110px;
                     color: #ff99d6;
                 }
                 .headery {
@@ -332,12 +340,12 @@ def main():
                     font-weight: bold;
                     text-align: center;
                     margin-top: 95px;
-                    margin-left: 30px;
+                    margin-left: 110px;
                     color: #ff99d6;
                 }
             </style>
             <div class="headerx">GREAT<br> RELATIONSHIPS <br> MEAN KNOWING <br> EACH OTHER WELL.</div>
-            <div class="headery">HOW MANY <br> REWARD MEMBERS <br> DO YOU HAVE?</div>
+            <div class="headery">HOW MANY <br> REWARDS MEMBERS <br> SHOP EACH MONTH? </div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
         st.markdown('<span id="button-prev"></span>', unsafe_allow_html=True)
@@ -352,7 +360,12 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="headerwbig">YOU HAVE <br> {selected_store_data['REWARD_MEMBERS']:,} <br> REWARDS MEMBERS.</div>
+            <div class="headerwbig">
+                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                REWARDS MEMBERS<br>
+                SHOP IN YOUR STORE<br>
+                EACH MONTH<br>
+            </div>
             <div class="header2">HOW WELL DO <br> YOU KNOW THEM? <br> LET'S FIND OUT!</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
@@ -368,7 +381,12 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="headerw">Out of your <br> {selected_store_data['REWARD_MEMBERS']:,} <br> Rewards Members...</div>
+            <div class="headerwbig">
+                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                REWARDS MEMBERS<br>
+                SHOP IN YOUR STORE<br>
+                EACH MONTH<br>
+            </div>
             <div class="header2">HOW MANY <br> COLLECT BONUS <br> POINTS?</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
@@ -384,7 +402,12 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="headerw">Out of your <br> {selected_store_data['REWARD_MEMBERS']:,} <br> Rewards Members...</div>
+            <div class="headerwbig">
+                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                REWARDS MEMBERS<br>
+                SHOP IN YOUR STORE<br>
+                EACH MONTH<br>
+            </div>
             <div class="header2">{round(selected_store_data['BONUS_POINTS_EARNED_MEMBERS']):,} COLLECT BONUS POINTS</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
@@ -400,8 +423,8 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="header_payoff_pink">CUSTOMERS WHO COLLECT BONUS POINTS SPEND 217% MORE THAN THOSE WHO DON'T</div>
-            <div class="header_payoff_white">Show the love by <br> hanging green tags <br> so they know about <br> promotions.</div>
+            <div class="header_payoff_pink">MEMBERS WHO COLLECT BONUS POINTS SPEND 217% MORE THAN THOSE WHO DON'T</div>
+            <div class="header_payoff_white">Show the love by <br> hanging green tags <br> so they know about <br> bonus offers.</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
         st.markdown('<span id="button-prev"></span>', unsafe_allow_html=True)
@@ -417,8 +440,13 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="headerb">Out of your <br> {selected_store_data['REWARD_MEMBERS']:,} <br> Rewards Members...</div>
-            <div class="headerbpink">WHAT PERCENTAGE HAVE AN EMAIL OR PHONE NUMBER LINKED TO THEIR PROFILE?</div>
+            <div class="headerb">
+                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                REWARDS MEMBERS<br>
+                SHOP IN YOUR STORE<br>
+                EACH MONTH<br>
+            </div>
+            <div class="headerbpink">WHAT PERCENT HAVE AN EMAIL OR PHONE NUMBER ON THEIR PROFILE?</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
@@ -434,8 +462,13 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="headerb">Out of your <br> {selected_store_data['REWARD_MEMBERS']:,} <br> Rewards Members...</div>
-            <div class="headerbpink">{round(selected_store_data['PERC_MEMBERS_WHO_ARE_CONTACTABLE']*100)}% <br> HAVE LINKED AN <br> EMAIL OR PHONE NUMBER.</div>
+        <div class="headerb">
+                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                REWARDS MEMBERS<br>
+                SHOP IN YOUR STORE<br>
+                EACH MONTH<br>
+            </div>
+            <div class="headerbpink">{round(selected_store_data['PERC_MEMBERS_WHO_ARE_CONTACTABLE']*100)}% <br> HAVE AN EMAIL <br>OR <br>PHONE NUMBER<br> ON THEIR PROFILE.</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
         st.markdown('<span id="button-prev"></span>', unsafe_allow_html=True)
@@ -450,8 +483,9 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="header_payoff_dark_pink">CONTACTABLE REWARD MEMEBERS SPEND 31% MORE <br> IN AN AVERAGE <br> MONTH THAN <br> NON-CONTACTABLE MEMBERS.</div>
-            <div class="header_payoff_black">Make sure Members register in the app.They'll visit more,spend more and never miss a deal.</div>
+            <div class="header_payoff_dark_pink">CONTACTABLE REWARDS MEMEBERS SPEND 31% MORE</div>
+                        <div style="margin: 550px;"></div>
+            <div class="header_payoff_black">Make sure MEMBERS <br> play MAKE MY DAY <br> WITH $5K in the <br> REWARDS app.</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
@@ -468,8 +502,13 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="headerw">Out of your <br> {selected_store_data['REWARD_MEMBERS']:,} <br> Rewards Members...</div>
-            <div class="header2">WHAT PERCENTAGE BUY {str.upper(selected_store_data['CATEGORY_FOR_MEMBER_ACTIVITY_KPIS'])} IN AN AVERAGE MONTH</div>
+            <div class="headerwbig">
+                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                REWARDS MEMBERS<br>
+                SHOP IN YOUR STORE<br>
+                EACH MONTH<br>
+            </div>
+            <div class="header2">WHAT PERCENT BUY {str.upper(selected_store_data['CATEGORY_FOR_MEMBER_ACTIVITY_KPIS'])}</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
@@ -486,8 +525,13 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="headerw">Out of your <br> {selected_store_data['REWARD_MEMBERS']:,} <br> Rewards Members...</div>
-            <div class="header2">{round(selected_store_data['PERC_CATEGORY_ACTIVE_CUSTOMERS']*100)}% <br> BUY {str.upper(selected_store_data['CATEGORY_FOR_MEMBER_ACTIVITY_KPIS'])} IN AN <br>AVERAGE MONTH.</div>
+            <div class="headerwbig">
+                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                REWARDS MEMBERS<br>
+                SHOP IN YOUR STORE<br>
+                EACH MONTH<br>
+            </div>
+            <div class="header2">{round(selected_store_data['PERC_CATEGORY_ACTIVE_CUSTOMERS']*100)}% <br> BUY {str.upper(selected_store_data['CATEGORY_FOR_MEMBER_ACTIVITY_KPIS'])}.</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
@@ -502,9 +546,10 @@ def main():
 
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
+
         quiz_html = f"""
             <div class="header_payoff_pink">RELATIONSHIPS <br> GROW STRONGER <br>WHEN WE CLEARLY<br> COMMUNICATE OFFERS <br>THEY'LL LOVE.</div>
-            <div class="header_payoff_white">Build loyalty by asking <br> customers for their phone<br> number at every transaction.</div>
+            <div class="header_payoff_white2">Build loyalty by asking <br> customers for their REWARDS<br> at every transaction.</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
@@ -521,8 +566,13 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="headerb">Out of your <br> {selected_store_data['REWARD_MEMBERS']:,} <br> Rewards Members...</div>
-            <div class="headerbpink">HOW MANY <br> REDEEM THOSE POINTS?</div>
+            <div class="headerb">
+                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                REWARDS MEMBERS<br>
+                SHOP IN YOUR STORE<br>
+                EACH MONTH<br>
+            </div>
+            <div class="headerbpink">HOW MANY <br> REDEEM THEIR POINTS?</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
@@ -540,7 +590,12 @@ def main():
         st.button("", key="home-button", on_click=go_to_home)
 
         quiz_html = f"""
-            <div class="headerb">Out of your <br> {selected_store_data['REWARD_MEMBERS']:,} <br> Rewards Members...</div>
+            <div class="headerb">
+                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                REWARDS MEMBERS<br>
+                SHOP IN YOUR STORE<br>
+                EACH MONTH<br>
+            </div>
             <div class="headerbpink">{round(selected_store_data['POINTS_REDEEMED_MEMBERS']):,} <br> REDEEM POINTS.</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
@@ -557,8 +612,9 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="header_payoff_dark_pink">THOSE WHO REDEEM <br> BONUS POINTS SPEND <br> 191% MORE THAN <br> THOSE WHO DON'T.</div>
-            <div class="header_payoff_black">Don't swipe ahead! <br> Let Members redeem their <br>points.This is the biggest<br> piece of relationship<br> advice recieved from <br> our customers.</div>
+            <div class="header_payoff_dark_pink">THOSE WHO REDEEM <br> POINTS SPEND <br> 191% MORE</div>
+                                    <div style="margin: 340px;"></div>
+            <div class="header_payoff_black">Don't swipe ahead! <br> Members want to <br> redeem their points.</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
@@ -576,8 +632,8 @@ def main():
         st.button("", key="home-button", on_click=go_to_home)
         category = str.upper(selected_store_data['CATEGORY_FOR_OVERALL_KPIS'])
         quiz_html = f"""
-            <div class="headerw">OUT OF ALL THE<br>{category} <br> TRANSACTIONS...</div>
-            <div class="header2">WHAT PERCENTAGE CONSISTED <br> ONLY A SINGLE UNIT <br> FROM <br>{category}, <br>WITH NO OTHER PRODUCT INCLUDED? </div>
+            <div class="headerwbig">OF ALL YOUR<br>{category} <br> TRANSACTIONS...</div>
+            <div class="header2">WHAT PERCENT OF<br>TRANSACTIONS HAD <br>ONLY 1 UNIT,<br> WITH NOTHING ELSE IN THE BASKET ?</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
         st.markdown('<span id="button-prev"></span>', unsafe_allow_html=True)
@@ -595,8 +651,8 @@ def main():
         data = round(selected_store_data['PERC_SINGLE_UNIT_TXNS_BASED_ON_ALL_SLINS']*100)
         category = str.upper(selected_store_data['CATEGORY_FOR_OVERALL_KPIS'])
         quiz_html = f"""
-            <div class="headerw">OUT OF ALL THE<br>{category} <br> TRANSACTIONS...</div>
-            <div class="header2">{data}% <br>OF TRANSACTIONS<br>HAD ONLY <br>ONE UNIT OF<br>{category}  </div>
+            <div class="headerwbig">OF ALL YOUR<br>{category} <br> TRANSACTIONS...</div>
+            <div class="header2">{data}% HAD ONLY<br> ONE UNIT<br>IN THE BASKET</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
@@ -613,7 +669,8 @@ def main():
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
             <div class="header_payoff_pink">MAKE A<br> CUTE COUPLE! <br> PLUS-SELL ITEMS <br> THAT PAIR WELL.</div>
-            <div class="header_payoff_white">If 1 out of every 10 customers buys 1 more unit,that's a 4% lift in sales.</div><
+            <div style="margin: 370px;"></div>
+            <div class="header_payoff_white">If 1 out of every 10 customers buys 1 more unit, that's a 4% lift in sales.</div><
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
         st.markdown('<span id="button-prev"></span>', unsafe_allow_html=True)
@@ -625,15 +682,15 @@ def main():
     elif st.session_state.page == 18:
         add_background("backgrounds/end_page.png")
         quiz_html = f"""
-            <div class="header_payoff_pink">THE SECRET TO <br>BUILDING A GREAT <br>REWARDS CUSTOMER <br>RELATIONSHIP<br> IS SIMPLE:</div>
+            <div class="header_payoff_pink">THE SECRET TO <br>BUILDING A GREAT <br>CUSTOMER RELATIONSHIP<br> IS SIMPLE:</div>
             <div class="header_payoff_dark_pink_small">1.  Be supportive</div>
-            <div class="header_payoff_white_small">of POP by hanging green tags.</div>
-            <div class="header_payoff_dark_pink_small">2.  Communicate</div>
-            <div class="header_payoff_white_small">by asking customers to identify at every transaction.</div>
-            <div class="header_payoff_dark_pink_small">3.  Show Love</div>
-            <div class="header_payoff_white_small">to Make my Day with $5K.</div>
+            <div class="header_payoff_white_small">Hang green tag POP.</div>
+            <div class="header_payoff_dark_pink_small">2.  Show Love</div>
+            <div class="header_payoff_white_small">MAKE MY DAY WITH $5K.</div>
+            <div class="header_payoff_dark_pink_small">3.  Communicate</div>
+            <div class="header_payoff_white_small">Ask every customer to scan REWARDS.</div>
             <div class="header_payoff_dark_pink_small">4.  Make a cute couple</div>
-            <div class="header_payoff_white_small">by plus selling.</div>
+            <div class="header_payoff_white_small">Plus Sell.</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
