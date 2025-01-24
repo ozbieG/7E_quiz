@@ -508,7 +508,7 @@ def main():
                 SHOP IN YOUR STORE<br>
                 EACH MONTH<br>
             </div>
-            <div class="header2">WHAT PERCENT BUY {str.upper(selected_store_data['CATEGORY_FOR_MEMBER_ACTIVITY_KPIS'])}</div>
+            <div class="header2">WHAT PERCENT BUY {str.upper(selected_store_data['CATEGORY_FOR_MEMBER_ACTIVITY_KPIS'])}?</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
