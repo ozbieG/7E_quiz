@@ -361,7 +361,7 @@ def main():
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
             <div class="headerwbig">
-                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                <span style="font-size: 1.3em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
                 REWARDS MEMBERS<br>
                 SHOP IN YOUR STORE<br>
                 EACH MONTH<br>
@@ -382,7 +382,7 @@ def main():
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
             <div class="headerwbig">
-                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                <span style="font-size: 1.3em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
                 REWARDS MEMBERS<br>
                 SHOP IN YOUR STORE<br>
                 EACH MONTH<br>
@@ -403,7 +403,7 @@ def main():
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
             <div class="headerwbig">
-                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                <span style="font-size: 1.3em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
                 REWARDS MEMBERS<br>
                 SHOP IN YOUR STORE<br>
                 EACH MONTH<br>
@@ -441,7 +441,7 @@ def main():
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
             <div class="headerb">
-                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                <span style="font-size: 1.3em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
                 REWARDS MEMBERS<br>
                 SHOP IN YOUR STORE<br>
                 EACH MONTH<br>
@@ -463,7 +463,7 @@ def main():
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
         <div class="headerb">
-                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                <span style="font-size: 1.3em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
                 REWARDS MEMBERS<br>
                 SHOP IN YOUR STORE<br>
                 EACH MONTH<br>
@@ -503,7 +503,7 @@ def main():
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
             <div class="headerwbig">
-                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                <span style="font-size: 1.3em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
                 REWARDS MEMBERS<br>
                 SHOP IN YOUR STORE<br>
                 EACH MONTH<br>
@@ -526,7 +526,7 @@ def main():
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
             <div class="headerwbig">
-                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                <span style="font-size: 1.3em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
                 REWARDS MEMBERS<br>
                 SHOP IN YOUR STORE<br>
                 EACH MONTH<br>
@@ -567,7 +567,7 @@ def main():
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
             <div class="headerb">
-                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                <span style="font-size: 1.3em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
                 REWARDS MEMBERS<br>
                 SHOP IN YOUR STORE<br>
                 EACH MONTH<br>
@@ -591,7 +591,7 @@ def main():
 
         quiz_html = f"""
             <div class="headerb">
-                <span style="font-size: 1.2em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
+                <span style="font-size: 1.3em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
                 REWARDS MEMBERS<br>
                 SHOP IN YOUR STORE<br>
                 EACH MONTH<br>
