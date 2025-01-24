@@ -424,6 +424,7 @@ def main():
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
             <div class="header_payoff_pink">MEMBERS WHO COLLECT BONUS POINTS SPEND 217% MORE</div>
+                        <div style="margin: 370px;"></div>
             <div class="header_payoff_white">Show the love by <br> hanging green tags <br> so they know about <br> bonus offers.</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
