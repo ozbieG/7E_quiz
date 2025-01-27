@@ -52,12 +52,18 @@ def encode_image(image_path):
         encoded_image = base64.b64encode(img_file.read()).decode("utf-8")
     return encoded_image
 
-
-
 def main():
     st.set_page_config(
     page_title="Questions", 
     layout="wide")
+    hide_streamlit_style = """
+        <style>
+            #MainMenu {visibility: hidden;} /* Hide the main menu */
+            footer {visibility: hidden;}   /* Hide the footer */
+            header {visibility: hidden;}
+        </style>
+    """
+    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
     st.markdown("""
             <style>
             .element-container:has(#button-home) + div button {
