@@ -495,7 +495,7 @@ def main():
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
             <div class="header_payoff_dark_pink">CONTACTABLE REWARDS MEMBERS SPEND 31% MORE</div>
-                        <div style="margin: 550px;"></div>
+                        <div style="margin: 400px;"></div>
             <div class="header_payoff_black">Make sure<br> MEMBERS play<br>MAKE MY DAY WITH $5K<br> In the REWARDS app.</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
@@ -624,7 +624,7 @@ def main():
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
             <div class="header_payoff_dark_pink">THOSE WHO REDEEM <br> POINTS SPEND <br> 191% MORE</div>
-                                    <div style="margin: 340px;"></div>
+                                    <div style="margin: 380px;"></div>
             <div class="header_payoff_black">Don't swipe ahead! <br> Members want to <br> redeem their points.</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
