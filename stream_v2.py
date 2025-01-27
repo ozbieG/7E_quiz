@@ -52,6 +52,8 @@ def encode_image(image_path):
         encoded_image = base64.b64encode(img_file.read()).decode("utf-8")
     return encoded_image
 
+
+
 def main():
     st.set_page_config(
     page_title="Questions", 
@@ -477,7 +479,7 @@ def main():
                 SHOP IN YOUR STORE<br> 
                 EACH MONTH<br>
             </div>
-            <div class="headerbpink">{round(selected_store_data['PERC_MEMBERS_WHO_ARE_CONTACTABLE']*100)}% <br> HAVE AN EMAIL <br>OR <br>PHONE NUMBER<br> ON THEIR PROFILE</div>
+            <div class="headerbpink">{round(selected_store_data['PERC_MEMBERS_WHO_ARE_CONTACTABLE']*100)}% HAVE AN<br> EMAIL OR <br>PHONE NUMBER<br> ON THEIR PROFILE</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
         st.markdown('<span id="button-prev"></span>', unsafe_allow_html=True)
