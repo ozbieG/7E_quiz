@@ -215,7 +215,7 @@ def main():
                     font-weight: bold;
                     text-align: left;
                     margin-top: 50px;
-                    margin-left: 150px;
+                    margin-left: 100px;
                     line-height: 1.2;
                     color: #ff0098;
                 }
@@ -225,7 +225,7 @@ def main():
                     font-weight: bold;
                     text-align: left;
                     margin-top: 10px;
-                    margin-left: 200px;
+                    margin-left: 161px;
                     line-height: 1.2;
                     color: white;
                 }
@@ -275,9 +275,9 @@ def main():
                 font-size: 40pt;
                 font-weight: bold;
                 text-align: center;
-                margin-top: 100px;
+                margin-top: 150px;
                     margin-left: 110px;
-                margin-bottom: 40px;
+                margin-bottom: 10px;
                 color: white;
 
             }
@@ -305,8 +305,8 @@ def main():
                     font-size: 20px; /* Increase font size inside the dropdown */
                     font-weight:900;
                     max-width: 400px; /* Increase width of the select box */
-                    margin-left: 305px; /* Center align */
-                    padding: 30px; /* Add some padding for better spacing */
+                    margin-left: 315px; /* Center align */
+                    margin-top: 1px;
                     width: 100%; /* Ensure the select box spans the width properly */
                 }
             </style>
@@ -330,8 +330,9 @@ def main():
                     font-size: 55pt;
                     font-weight: bold;
                     text-align: center;
-                    margin-top: 350px;
+                    margin-top: 280px;
                     margin-left: 110px;
+                    line-height: 1.2;
                     color: #ff99d6;
                 }
                 .headery {
@@ -339,13 +340,14 @@ def main():
                     font-size: 55pt;
                     font-weight: bold;
                     text-align: center;
-                    margin-top: 95px;
+                    margin-top: 150px;
                     margin-left: 110px;
+                    line-height: 1.2;
                     color: #ff99d6;
                 }
             </style>
             <div class="headerx">GREAT<br> RELATIONSHIPS <br> MEAN KNOWING <br> EACH OTHER WELL.</div>
-            <div class="headery">HOW MANY <br> REWARDS MEMBERS <br> SHOP EACH MONTH? </div>
+            <div class="headery">HOW MANY <br> REWARDS MEMBERS <br> SHOP IN YOUR STORE EACH MONTH? </div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
         st.markdown('<span id="button-prev"></span>', unsafe_allow_html=True)
@@ -387,7 +389,7 @@ def main():
                 SHOP IN YOUR STORE<br>
                 EACH MONTH<br>
             </div>
-            <div class="header2">HOW MANY <br> COLLECT BONUS <br> POINTS?</div>
+            <div class="header2">HOW MANY <br> COLLECT <br>BONUS POINTS?</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
         st.markdown('<span id="button-prev"></span>', unsafe_allow_html=True)
@@ -408,7 +410,7 @@ def main():
                 SHOP IN YOUR STORE<br>
                 EACH MONTH<br>
             </div>
-            <div class="header2">{round(selected_store_data['BONUS_POINTS_EARNED_MEMBERS']):,} COLLECT BONUS POINTS</div>
+            <div class="header2">{round(selected_store_data['BONUS_POINTS_EARNED_MEMBERS']):,} COLLECT <br>BONUS POINTS</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
@@ -423,7 +425,7 @@ def main():
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
         st.button("", key="home-button", on_click=go_to_home)
         quiz_html = f"""
-            <div class="header_payoff_pink">MEMBERS WHO COLLECT BONUS POINTS SPEND 217% MORE</div>
+            <div class="header_payoff_pink">MEMBERS WHO COLLECT <br>BONUS POINTS <br>SPEND 217% MORE</div>
                         <div style="margin: 370px;"></div>
             <div class="header_payoff_white">Show the love by <br> hanging green tags <br> so they know about <br> bonus offers.</div>
         """
@@ -466,10 +468,10 @@ def main():
         <div class="headerb">
                 <span style="font-size: 1.3em; font-weight: bold;">{selected_store_data['REWARD_MEMBERS']:,}</span> <br>
                 REWARDS MEMBERS<br>
-                SHOP IN YOUR STORE<br>
+                SHOP IN YOUR STORE<br> 
                 EACH MONTH<br>
             </div>
-            <div class="headerbpink">{round(selected_store_data['PERC_MEMBERS_WHO_ARE_CONTACTABLE']*100)}% <br> HAVE AN EMAIL <br>OR <br>PHONE NUMBER<br> ON THEIR PROFILE.</div>
+            <div class="headerbpink">{round(selected_store_data['PERC_MEMBERS_WHO_ARE_CONTACTABLE']*100)}% <br> HAVE AN EMAIL <br>OR <br>PHONE NUMBER<br> ON THEIR PROFILE</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
         st.markdown('<span id="button-prev"></span>', unsafe_allow_html=True)
@@ -486,7 +488,7 @@ def main():
         quiz_html = f"""
             <div class="header_payoff_dark_pink">CONTACTABLE REWARDS MEMBERS SPEND 31% MORE</div>
                         <div style="margin: 550px;"></div>
-            <div class="header_payoff_black">Make sure MEMBERS <br> play MAKE MY DAY <br> WITH $5K in the <br> REWARDS app.</div>
+            <div class="header_payoff_black">Make sure<br> MEMBERS play<br>MAKE MY DAY WITH $5K<br> In the REWARDS app.</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
@@ -532,7 +534,7 @@ def main():
                 SHOP IN YOUR STORE<br>
                 EACH MONTH<br>
             </div>
-            <div class="header2">{round(selected_store_data['PERC_CATEGORY_ACTIVE_CUSTOMERS']*100)}% <br> BUY {str.upper(selected_store_data['CATEGORY_FOR_MEMBER_ACTIVITY_KPIS'])}.</div>
+            <div class="header2">{round(selected_store_data['PERC_CATEGORY_ACTIVE_CUSTOMERS']*100)}% <br> BUY {str.upper(selected_store_data['CATEGORY_FOR_MEMBER_ACTIVITY_KPIS'])}</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
@@ -597,7 +599,7 @@ def main():
                 SHOP IN YOUR STORE<br>
                 EACH MONTH<br>
             </div>
-            <div class="headerbpink">{round(selected_store_data['POINTS_REDEEMED_MEMBERS']):,} <br> REDEEM POINTS.</div>
+            <div class="headerbpink">{round(selected_store_data['POINTS_REDEEMED_MEMBERS']):,} <br> REDEEM POINTS</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
 
@@ -634,7 +636,7 @@ def main():
         category = str.upper(selected_store_data['CATEGORY_FOR_OVERALL_KPIS'])
         quiz_html = f"""
             <div class="headerwbig">OF ALL YOUR<br>{category} <br> TRANSACTIONS...</div>
-            <div class="header2">WHAT PERCENT OF<br>TRANSACTIONS HAD <br>ONLY 1 UNIT,<br> WITH NOTHING ELSE IN THE BASKET ?</div>
+            <div class="header2">WHAT PERCENT OF<br>TRANSACTIONS HAD <br>ONLY 1 UNIT,<br> WITH NOTHING ELSE IN THE BASKET?</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
         st.markdown('<span id="button-prev"></span>', unsafe_allow_html=True)
@@ -684,14 +686,15 @@ def main():
         add_background("backgrounds/end_page.png")
         quiz_html = f"""
             <div class="header_payoff_pink">THE SECRET TO <br>BUILDING A GREAT <br>CUSTOMER RELATIONSHIP<br> IS SIMPLE:</div>
-            <div class="header_payoff_dark_pink_small">1.  Be supportive</div>
-            <div class="header_payoff_white_small">Hang green tag POP.</div>
+            <div style="margin: 150px;"></div>
+            <div class="header_payoff_dark_pink_small">1.  Be Supportive</div>
+            <div class="header_payoff_white_small">Hang green tag POP</div>
             <div class="header_payoff_dark_pink_small">2.  Show Love</div>
-            <div class="header_payoff_white_small">MAKE MY DAY WITH $5K.</div>
+            <div class="header_payoff_white_small">MAKE MY DAY WITH $5K</div>
             <div class="header_payoff_dark_pink_small">3.  Communicate</div>
-            <div class="header_payoff_white_small">Ask every customer to scan REWARDS.</div>
-            <div class="header_payoff_dark_pink_small">4.  Make a cute couple</div>
-            <div class="header_payoff_white_small">Plus Sell.</div>
+            <div class="header_payoff_white_small">Ask every customer to scan REWARDS</div>
+            <div class="header_payoff_dark_pink_small">4.  Make a Cute Couple</div>
+            <div class="header_payoff_white_small">Plus Sell</div>
         """
         st.markdown(quiz_html, unsafe_allow_html=True)
         st.markdown('<span id="button-home"></span>', unsafe_allow_html=True)
