@@ -53,7 +53,6 @@ def encode_image(image_path):
     return encoded_image
 
 
-
 def main():
     st.set_page_config(
     page_title="Questions", 
@@ -320,7 +319,8 @@ def main():
             </style>
         """, unsafe_allow_html=True)
 
-        selected_store = st.selectbox("", store_data['STORE_ID'].unique())
+        filtered_stores = store_data[store_data['STORE_EXCL_FLAG'] == 'N']
+        selected_store = st.selectbox("", filtered_stores['STORE_ID'].unique())
         st.markdown('<span id="button-next"></span>', unsafe_allow_html=True)
         st.button("", on_click=start_quiz, args=(selected_store,))
 
